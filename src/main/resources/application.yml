@@ -1,0 +1,39 @@
+server:
+  port: 9918
+  servlet:
+    context-path: /
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 600000
+        readTimeout: 600000
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: BaiTech_QuanLyCV
+  datasource:
+    url: jdbc:mysql://localhost:3306/baitech?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: haitam77
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+        dialect: org.hibernate.dialect.MySQL8Dialect  # Đổi đây để phù hợp với Hibernate 6
+
+# ------------------- Local -------------------
+
+# Database info
+INTEGRATION_DATABASE_URL: jdbc:mysql://localhost:3306/baitech?useSSL=false
+INTEGRATION_DATABASE_USER: root
+INTEGRATION_DATABASE_PASS: haitam77

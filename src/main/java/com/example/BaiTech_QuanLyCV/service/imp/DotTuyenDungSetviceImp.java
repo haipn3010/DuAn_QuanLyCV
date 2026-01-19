@@ -1,10 +1,8 @@
 package com.example.BaiTech_QuanLyCV.service.imp;
 
 import com.example.BaiTech_QuanLyCV.dto.DotTuyenDungDTO;
-import com.example.BaiTech_QuanLyCV.dto.PhongBanDTO;
 import com.example.BaiTech_QuanLyCV.entity.DotTuyenDung;
 import com.example.BaiTech_QuanLyCV.entity.NhanVien;
-import com.example.BaiTech_QuanLyCV.entity.PhongBan;
 import com.example.BaiTech_QuanLyCV.exception.ResourceNotfound;
 import com.example.BaiTech_QuanLyCV.repository.DotTuyenDungRepository;
 import com.example.BaiTech_QuanLyCV.repository.NhanVienRepository;

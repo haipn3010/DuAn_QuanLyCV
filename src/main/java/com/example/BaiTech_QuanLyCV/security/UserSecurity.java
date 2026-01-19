@@ -22,29 +22,6 @@ public class UserSecurity {
         return jdbcUserDetailsManager;
     }
 
-//    @Bean
-//    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-//        httpSecurity.authorizeHttpRequests(
-//                authorize -> authorize
-//                        .requestMatchers("/admin/**").hasRole("ADMIN")
-//                        .requestMatchers("/manager/**").hasAnyRole("MANAGER", "ADMIN")
-//                        .requestMatchers("/member/**").hasAnyRole("MANAGER", "MEMBER")
-//                        .requestMatchers("/public/**").permitAll()
-//                        .anyRequest().permitAll()
-//
-//        ).formLogin(
-//                form -> form.loginPage("/showLoginPage").loginProcessingUrl("/authenticateTheUser").permitAll()
-//        )
-//                .logout(
-//                        logout -> logout.permitAll()
-//                );
-//        httpSecurity.httpBasic(Customizer.withDefaults());
-//        httpSecurity.csrf(csrf -> csrf.disable());
-//        // csrf - cross site request forgery
-//
-//        return httpSecurity.build();
-//    }
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
